@@ -1,9 +1,15 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-@custom-variant dark (&:is(.dark *));
-
+/* Removed invalid tw-animate-css import and simplified CSS for Vercel compatibility */
 :root {
+  /* Banner-extracted colors */
+  --banner-purple: #1a0d2e;
+  --banner-cyan: #00ffcc;
+  --banner-teal: #00bcd4;
+  --pitch-green: #00ff88;
+
+  /* Standard design tokens */
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
@@ -37,12 +43,6 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
-
-  /* Added custom color tokens for easier use */
-  --accent-teal: #00bcd4;
-  --accent-cyan: #00ffcc;
-  --pitch-green: #00ff88;
-  --banner-purple: #4a1a5c;
 }
 
 .dark {
@@ -81,6 +81,7 @@
 }
 
 @theme inline {
+  /* optional: --font-sans, --font-serif, --font-mono if they are applied in the layout.tsx */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -117,12 +118,6 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
-
-  /* Added custom color classes for banner colors */
-  --color-accent-teal: var(--accent-teal);
-  --color-accent-cyan: var(--accent-cyan);
-  --color-pitch-green: var(--pitch-green);
-  --color-banner-purple: var(--banner-purple);
 }
 
 @layer base {
@@ -130,15 +125,33 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground antialiased;
+    @apply bg-background text-foreground;
   }
+}
 
-  /* Updated stadium glow to use exact banner colors */
+@layer utilities {
+  /* Simplified stadium-glow effect for build compatibility */
   .stadium-glow {
-    box-shadow: 0 0 20px #00ffcc40, 0 0 40px #00bcd430;
+    box-shadow: 0 0 20px rgba(0, 255, 204, 0.3), 0 0 40px rgba(0, 188, 212, 0.2);
   }
 
   .pitch-gradient {
-    background: linear-gradient(135deg, #1a0d2e 0%, #2d1b3d 100%);
+    background: linear-gradient(135deg, #1a0d2e 0%, #2d1b3d 50%, #4a1a5c 100%);
+  }
+
+  .text-banner-cyan {
+    color: #00ffcc;
+  }
+
+  .text-banner-purple {
+    color: #1a0d2e;
+  }
+
+  .bg-banner-purple {
+    background-color: #1a0d2e;
+  }
+
+  .bg-banner-cyan {
+    background-color: #00ffcc;
   }
 }
