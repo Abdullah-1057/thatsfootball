@@ -9,7 +9,9 @@
     "start": "next start"
   },
   "packageManager": "npm@10",
-  "engines": { "node": "20.x" },
+  "engines": {
+    "node": "20.x"
+  },
   "dependencies": {
     "@emotion/is-prop-valid": "latest",
     "@hookform/resolvers": "^3.10.0",
@@ -49,6 +51,7 @@
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "cmdk": "1.0.4",
+    "critters": "^0.0.25",
     "date-fns": "4.1.0",
     "embla-carousel-react": "8.5.1",
     "expo": "latest",
