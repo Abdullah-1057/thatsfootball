@@ -8,6 +8,8 @@
     "lint": "next lint",
     "start": "next start"
   },
+  "packageManager": "npm@10",
+  "engines": { "node": "20.x" },
   "dependencies": {
     "@emotion/is-prop-valid": "latest",
     "@hookform/resolvers": "^3.10.0",
