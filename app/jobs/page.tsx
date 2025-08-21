@@ -1,7 +1,7 @@
-// import { JobsHero } from "@/components/jobs/jobs-hero"
-// import { JobsList } from "@/components/jobs/jobs-list"
-// import { Navigation } from "@/components/navigation"
-// import { Footer } from "@/components/footer"
+import { JobsHero } from "@/components/jobs/jobs-hero"
+import { JobsList } from "@/components/jobs/jobs-list"
+import { Navigation } from "@/components/navigation"
+import { Footer } from "@/components/footer"
 
 export const metadata = {
   title: "Careers - That's Football",
@@ -17,10 +17,10 @@ export const metadata = {
 export default function JobsPage() {
   return (
     <main className="min-h-screen">
-      {/* <Navigation />
+      <Navigation />
       <JobsHero />
       <JobsList />
-      <Footer /> */}
+      <Footer />
     </main>
   )
 }

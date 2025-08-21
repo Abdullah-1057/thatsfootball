@@ -1,10 +1,10 @@
-// import { AboutHero } from "@/components/about/about-hero"
-// import { MissionSection } from "@/components/about/mission-section"
-// import { TimelineSection } from "@/components/about/timeline-section"
-// import { StudioSection } from "@/components/about/studio-section"
-// import { StatsSection } from "@/components/about/stats-section"
-// import { Navigation } from "@/components/navigation"
-// import { Footer } from "@/components/footer"
+import { AboutHero } from "@/components/about/about-hero"
+import { MissionSection } from "@/components/about/mission-section"
+import { TimelineSection } from "@/components/about/timeline-section"
+import { StudioSection } from "@/components/about/studio-section"
+import { StatsSection } from "@/components/about/stats-section"
+import { Navigation } from "@/components/navigation"
+import { Footer } from "@/components/footer"
 
 export const metadata = {
   title: "About Mark Goldbridge - That's Football",
@@ -20,13 +20,13 @@ export const metadata = {
 export default function AboutPage() {
   return (
     <main className="min-h-screen">
-      {/* <Navigation />
+      <Navigation />
       <AboutHero />
       <MissionSection />
       <TimelineSection />
       <StudioSection />
       <StatsSection />
-      <Footer /> */}
+      <Footer />
     </main>
   )
 }
